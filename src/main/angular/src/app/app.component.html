@@ -1,0 +1,9 @@
+<div>
+  <div class="buttons">
+    <button class="myButton" (click)="onConnect()">Connect</button>
+    <button class="myButton" (click)="onSend()">Send Message</button>
+    <ul>
+      <li *ngFor="let m of messages">{{ m.message }}</li>
+  </ul>
+  </div>  
+</div>

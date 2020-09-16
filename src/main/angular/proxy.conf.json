@@ -1,0 +1,8 @@
+{
+    "/websocket-server/*": {
+      "target": "ws://localhost:8080/",
+      "secure": false,
+      "logLevel": "debug",
+      "ws": true
+    }
+  }
