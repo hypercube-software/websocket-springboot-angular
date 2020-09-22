@@ -1,23 +1,6 @@
 # WebSocket with SpringBoot and Angular 10
-**Table of content**
 
-[1.1 Project layout](#11-project-layout)  
-[1.2 Websocket server in SpringBoot](#12-websocket-server-in-springboot)  
-[1.2.1 WebSocket server](#121-websocket-server)  
-[1.2.2 Object serialization](#122-object-serialization)  
-[1.2.3 Endpoint](#123-endpoint)  
-  
-  
-[1.3 Websocket client in Angular](#13-websocket-client-in-angular)  
-  
-  
-[2 Build the project](#2-build-the-project)  
-[3 Development mode](#3-development-mode)  
-
-
-
-
-## 1.1 Project layout
+## Project layout
 
 The project is a simple SpringBoot microservice containing an Angular application. The maven project contains two projects in one:
 
@@ -41,11 +24,11 @@ Then in the maven `pom.xml` we add this directory as a resource. This will embed
 	</resources>
 ```
 
-## 1.2 Websocket server in SpringBoot
+## Websocket server in SpringBoot
 
 The [official tutorial from spring](https://spring.io/guides/gs/messaging-stomp-websocket/) uses [STOMP](http://stomp.github.io/) and [SockJS](https://github.com/sockjs/sockjs-client) on top of the WebSocket API. This can be useful in some cases but that's not what we are going to do here. We will use only the WebSocket API in SpringBoot without STOMP or SockJS. This mean we expect to have a browser with WebSocket client API.
 
-### 1.2.1 WebSocket server
+### WebSocket server
 
 We just have to inherit from class `org.springframework.web.socket.handler.TextWebSocketHandler`
 
@@ -70,7 +53,7 @@ public class WebSocketHandler extends TextWebSocketHandler {
 }
 ```
 
-### 1.2.2 Object serialization
+### Object serialization
 
 We use the `Jackson ObjectMapper` provided by SpringBoot runtime.
 
@@ -80,7 +63,7 @@ private ObjectMapper objectMapper;
 ```
 Our model is very simple, we have a `HelloRequest` and a `HelloResponse`.
 
-### 1.2.3 Endpoint
+### Endpoint
 
 We declare the WebSocket endpoint inheriting from `org.springframework.web.socket.config.annotation.WebSocketConfigurer`
 
@@ -101,7 +84,7 @@ public class WebSocketConfiguration implements WebSocketConfigurer {
 
 The endpoint will be `ws://host:port/websocket-server`
 
-## 1.3 Websocket client in Angular
+## Websocket client in Angular
 
 In Angular we use the browser API for Websocket in our Application component:
 
@@ -162,7 +145,7 @@ export class AppComponent {
 
 ```
 
-# 2 Build the project
+# Build the project
 
 Build the angular application with npm (in `src/main/angular`):
 
@@ -184,7 +167,7 @@ c:\java\jdk-11.0.2\bin\java -jar target\websocket-server-0.0.1-SNAPSHOT.jar
 
 Then go to [http://localhost:8080/](http://localhost:8080/)
 
-# 3 Development mode
+# Development mode
 
 During development, you have to work differently:
 
