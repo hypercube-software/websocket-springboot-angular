@@ -1,21 +1,15 @@
 # WebSocket with SpringBoot and Angular 10
 **Table of content**
 
-[1.1 Project layout](#11-project-layout)  
-[1.2 Websocket server in SpringBoot](#12-websocket-server-in-springboot)  
-[1.2.1 WebSocket server](#121-websocket-server)  
-[1.2.2 Object serialization](#122-object-serialization)  
-[1.2.3 Endpoint](#123-endpoint)  
-  
-  
-[1.3 Websocket client in Angular](#13-websocket-client-in-angular)  
-  
-  
+[1 WebSocket with SpringBoot and Angular 10](#websocket-with-springboot-and-angular-10)  
+&nbsp;&nbsp;&nbsp;&nbsp;[1.1 Project layout](#11-project-layout)  
+&nbsp;&nbsp;&nbsp;&nbsp;[1.2 Websocket server in SpringBoot](#12-websocket-server-in-springboot)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.2.1 WebSocket server](#121-websocket-server)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.2.2 Object serialization](#122-object-serialization)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[1.2.3 Endpoint](#123-endpoint)  
+&nbsp;&nbsp;&nbsp;&nbsp;[1.3 Websocket client in Angular](#13-websocket-client-in-angular)  
 [2 Build the project](#2-build-the-project)  
 [3 Development mode](#3-development-mode)  
-
-
-
 
 ## 1.1 Project layout
 
